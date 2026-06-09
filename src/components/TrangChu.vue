@@ -1,10 +1,29 @@
 <script setup>
+import { ref, reactive } from "vue";
+
 defineProps({
   msg: {
     type: String,
     required: true,
   },
 });
+
+const books = reactive([
+  {
+    id: "1",
+    ten: "bruh",
+    loai: "1",
+    tacGia: "quak",
+    gia: 10000,
+  },
+  {
+    id: "2",
+    ten: "quak",
+    loai: "2",
+    tacGia: "bruh",
+    gia: 20000,
+  },
+]);
 </script>
 
 <template>
@@ -25,6 +44,8 @@ defineProps({
       Giá: <input type="" />
       <br />
     </form>
+    <button>Thêm</button>
+    <button>Cập nhật</button>
   </div>
 </template>
 

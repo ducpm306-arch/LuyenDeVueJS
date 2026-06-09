@@ -1,8 +1,14 @@
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
+
 <template>
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Trang chủ</a>
+        <RouterLink to="/books"
+          ><a class="navbar-brand" href="#">Trang chủ</a></RouterLink
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -16,7 +22,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Pages</a>
+            <RouterLink to="/page"
+              ><a class="nav-link active" aria-current="page" href="#"
+                >Pages</a
+              ></RouterLink
+            >
           </div>
         </div>
       </div>

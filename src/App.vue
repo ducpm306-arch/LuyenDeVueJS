@@ -1,4 +1,5 @@
 <script setup>
+import { RouterView } from "vue-router";
 import TrangChu from "./components/TrangChu.vue";
 import Footer from "./layout/Footer.vue";
 import Header from "./layout/Header.vue";
@@ -6,7 +7,7 @@ import Header from "./layout/Header.vue";
 
 <template>
   <Header></Header>
-  <TrangChu></TrangChu>
+  <RouterView></RouterView>
   <Footer></Footer>
 </template>
 
