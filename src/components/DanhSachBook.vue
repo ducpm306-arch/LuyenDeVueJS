@@ -2,8 +2,9 @@
 import { ref, reactive } from "vue";
 
 defineProps({
-  msg: {
-    listBooks: Array,
+  listBooks: {
+    type: Array,
+    required: true,
   },
 });
 </script>
@@ -20,7 +21,7 @@ defineProps({
       </tr>
     </thead>
     <tbody>
-      <tr v-for="b in listBooks" :key="b.listBooks">
+      <tr v-for="b in listBooks" :key="b.id">
         <td>{{ b.id }}</td>
         <td>{{ b.ten }}</td>
         <td>{{ b.loai }}</td>

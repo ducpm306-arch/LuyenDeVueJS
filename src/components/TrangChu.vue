@@ -1,5 +1,6 @@
 <script setup>
 import { ref, reactive } from "vue";
+import DanhSachBook from "./DanhSachBook.vue";
 
 defineProps({
   msg: {
@@ -44,8 +45,12 @@ const books = reactive([
       Giá: <input type="" />
       <br />
     </form>
+    <br></br>
     <button>Thêm</button>
+    <br></br>
     <button>Cập nhật</button>
+    <br></br>
+    <DanhSachBook :listBooks="books" />
   </div>
 </template>
 
